@@ -1,0 +1,32 @@
+table {
+  width: 60%;
+  margin: auto auto;
+  
+  border-collapse: collapse;
+  border-radius: 60px;
+  border-color: rgba(128, 128, 128, 0.24);
+  border-style: solid;
+  color: #000000;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  
+}
+tbody tr:nth-child(2n) {
+  background-color: rgba(185, 185, 185, 0.842);
+}
+tbody th {
+  background-color: rgba(87, 87, 87, 0.801);
+}
+
+table td, th {
+  border-width: 2px;
+  border-color: rgba(128, 128, 128, 0.24);
+  border-style: solid;
+  padding: 15px;
+}
+table thead {
+  background-color: rgb(226, 134, 59);; 
+}
+
+table thead {
+  font-style: italic
+}

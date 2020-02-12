@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'costuraregular';
+    src: url('costura_regular-webfont.eot');
+    src: url('costura_regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('costura_regular-webfont.woff2') format('woff2'),
+         url('costura_regular-webfont.woff') format('woff'),
+         url('costura_regular-webfont.ttf') format('truetype'),
+         url('costura_regular-webfont.svg#costuraregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+

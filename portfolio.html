@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<!--
+
+Original Author:Derek Dombek
+Date Created:08-22-19
+Version:portfolio html layout
+Date Last Modified: 10/23/19
+Modified by:Derek Dombek
+Modification log: completely redesigned my portfolio section. I put in some past work ive done. 
+added fade in - out and words and buttons that appear when hovering over each portfolio item. also links to new tabbed sites.
+ 
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="Wed design portfolio">
+<meta name="keywords" content="C#,HTML,html5,CSS,portfolio">
+<meta name="author" content="Derek Dombek">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio Page</title>
+<script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
+  <script src="js/scroll.js"></script>
+  <!--<script src="js/folioFade.js"></script>-->
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/DerekPortfolio.css">
+<link rel="stylesheet" href="css/portfoliotable.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+<link rel="manifest" href="images/site.webmanifest">
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+</head>
+
+<body>
+    <div id="outerwrap">
+            <header class="topbar">
+                    <a href="index.html"><img src="images/logo2.png" class="mainlogo" alt="icon logo"></a>
+                    <div class="hamburger">
+                        <span><a href="#" ><img src="images/hamburger.png"></a></span>
+                        <nav class="hamburger-content">    
+                            <ul >
+                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="portfolio.html">Portfolio</a></li>
+                                    <li><a href="aboutme.html">About Me</a></li>
+                                    <li><a href="contactme.html">Contact Me</a></li>
+                                    
+                                    
+                                   
+                    </ul>
+                    </nav>
+        
+                    </div>
+                    <nav id="main-menu">    
+                        <ul >
+                                <li><a href="contactme.html">Contact Me</a></li>
+                                <li><a href="aboutme.html">About Me</a></li>
+                                <li><a href="portfolio.html">Portfolio</a></li>
+                                <li><a href="index.html">Home</a></li>
+                </ul>
+                </nav>  
+            </header>
+     <section class="firstMain">
+            <h1><img src="images/portfoliologo.png" class="portfoliologo" alt="dLogo"></h1>
+            <div id="border-bottom"></div>
+
+           
+            </section>
+
+<div class="secondMain">
+        <!--<table>
+                <thead>
+                <tr>
+                    <th>Classes</th>	
+                    <th>Languages</th>
+                    <th>Experience</th>	
+                    <th>Final Grades</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>		
+                    <th>Intro to Programming</th>
+                    <td>C#</td>
+                    <td>5 weeks</td>
+                    <td>B</td>
+                </tr><tr>
+                        <th>Intermediate Programming</th>
+                        <td>C#</td>
+                        <td>5 weeks</td>
+                        <td>A</td>
+                    </tr>
+                        
+                <tr>
+                        <th>Web Application Development</th>
+                        <td>Html and CSS</td>
+                        <td>5 weeks</td>
+                        <td>A</td>
+                        
+                </tr>
+                <tr>
+                        <th>Web Styling</th>
+                        <td>Html and CSS</td>
+                        <td>5 weeks</td>
+                        <td>A</td>
+                        
+                </tr>
+                <tr>
+                        <th>Intermediate Web App Development</th>
+                        <td>JavaScript</td>
+                        <td>5 weeks</td>
+                        <td>In progress</td>
+                        
+                </tr>
+            
+            </tbody>
+            </table>-->
+            <div id="sectionborder2">
+            <div class="folioContainer">
+                    <div class="box">
+                            <div class="imgBox">
+                                <img src="images/bobexample.png" class="bobScreenshot" alt="screenshot">
+                            </div> 
+                            <div class="projectTitle">
+                                <div class="content">
+                                    <p>Bobs Fishing Tours</p>
+                                    <p class="bobsLang">(html,css)</p>
+                                </div>
+                                <div class="content2">
+                                        <form action="http://www.w3expressions.com/derekdombek/weekFourproject/" method="get" target="_blank">
+                                            <button type="submit">Visit Site</button>
+                                         </form>
+                                    </div>
+                                
+                            </div>    
+                        </div>
+                        <div class="box">
+                                <div class="imgBox">
+                                        <img src="images/hungrypacman.png" alt="screenshot">
+                                    </div> 
+                                    <div class="projectTitle">
+                                        <div class="contentGame">
+                                            <p>Hungry Pacman Game</p>
+                                            <p class="bobsLang">(Pure JavaScript)</p>
+                                        </div>
+                                        <div class="content2">
+                                                <form action="https://storage.googleapis.com/spring2019derek.w3expressions.org/JavaScript_Game/index.html" method="get" target="_blank">
+                                                    <button type="submit">Play Game</button>
+                                                 </form>
+                                            </div>
+                                        
+                                    </div>  
+                        </div>
+                        <div class="box">
+                                <div class="imgBox">
+                                        <img src="images/kitchenConversionApp.PNG" class="bobScreenshot" alt="screenshot">
+                                    </div> 
+                                    <div class="projectTitle">
+                                        <div class="contentConvert">
+                                            <p>Kitchen Conversion App</p>
+                                            <p class="bobsLang">(console C#)</p>
+                                        </div>
+                                        <div class="content2">
+                                                <form action="https://storage.googleapis.com/spring2019derek.w3expressions.org/kitchenConvert/kitchenConversionCode.txt" method="get" target="_blank">
+                                                    <button type="submit">View Code</button>
+                                                 </form>
+                                            </div>
+                                        
+                                    </div>  
+                        </div> 
+                        <div class="box">
+                                <div class="imgBox">
+                                        <img src="images/flightScheduleApp.PNG" class="bobScreenshot" alt="screenshot">
+                                    </div> 
+                                    <div class="projectTitle">
+                                        <div class="contentConvert">
+                                            <p>Flight Schedule App</p>
+                                            <p class="bobsLang">(console C#)</p>
+                                        </div>
+                                        <div class="content2">
+                                                <form action="https://storage.googleapis.com/spring2019derek.w3expressions.org/flightSched/flightScheduleCode.txt" method="get" target="_blank">
+                                                    <button type="submit">View Code</button>
+                                                 </form>
+                                            </div>
+                                        
+                                    </div>  
+                        </div> 
+                                    
+                        
+                                      
+                        
+                    </div>
+          
+            
+                </div>
+        
+       
+</div>
+<section>
+    <h1 id="resources"></h1>
+        <div class="menucontainer">
+            <div class="mywork">My Work</div>
+            <div class="mystory">My Story</div>
+            <div class="contactme">Contact Me</div>
+        </div>
+        <div class="menulogocontainer">
+                <div><a href="portfolio.html" ><img src="images/portfoliologo.png" class="portfoliologo"></a></div>
+                <div><a href="aboutme.html" ><img src="images/aboutmelogo.png" class="aboutmelogo"></a></div>
+                <div><a href="contactme.html" ><img src="images/contactmelogo.png" class="contactmelogo"></a></div>      
+    </div>
+        
+</section>
+
+<footer>
+        <div class="containerbackground">
+                    
+                    
+            
+        <div class="mediacontainer">
+                <div><a href="https://www.instagram.com/dad.photos/" target="_blank"><img src="images/instaiconLogo.png" class="instalogo"></a></div>
+                <div><a href="https://www.linkedin.com/in/derek-dombek-905b58106/" target="_blank"><img src="images/In-Blue-34.png" class="linkedinlogo"></a></div>
+                <div><a href="https://github.com/derekadombek" target="_blank"><img src="images/GitHub-Mark-120px-plus.png" class="githublogo"></a></div>
+        </div>
+    </div>
+        <p>
+                <a href="tel:12163081700">(216) 308-1700</a><br/>
+                <a href="mailto:Dombek1989@gmail.com">Dombek1989@gmail.com</a><br/><br/>
+                <span style="color:blue">2019</span> &copy; <a href="index.html" class="copyright">Derek A Dombek</a>. All Rights Reserved.
+                </p>
+            
+</footer>
+
+</div> 
+</body>
+</html>

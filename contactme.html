@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<!--
+
+Original Author:Derek Dombek
+Date Created:08-22-19
+Version:contact html layout
+Date Last Modified: 10/10/19
+Modified by:Derek Dombek
+Modification log: Last thing I did on this page was add some text saying "talk to you soon" after the user clicks submit.
+ 
+-->
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="description" content="Wed design portfolio">
+<meta name="keywords" content="C#,HTML,html5,CSS,portfolio">
+<meta name="author" content="Derek Dombek">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio Page</title>
+
+<script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
+  <script src="js/scroll.js"></script>
+  <script src="js/submitText.js"></script>
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/DerekPortfolio.css">
+<link rel="stylesheet" type="text/css" href="css/contactme.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+<link rel="manifest" href="images/site.webmanifest">
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+</head>
+
+<body>
+    <div id="outerwrap">
+            <header class="topbar">
+                    <a href="index.html"><img src="images/logo2.png" class="mainlogo" alt="icon logo"></a>
+                    <div class="hamburger">
+                        <span><a href="#" ><img src="images/hamburger.png"></a></span>
+                        <nav class="hamburger-content">    
+                            <ul >
+                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="portfolio.html">Portfolio</a></li>
+                                    <li><a href="aboutme.html">About Me</a></li>
+                                    <li><a href="contactme.html">Contact Me</a></li>
+                                    
+                                    
+                                   
+                    </ul>
+                    </nav>
+        
+                    </div>
+                    <nav id="main-menu">    
+                        <ul >
+                                <li><a href="contactme.html">Contact Me</a></li>
+                                <li><a href="aboutme.html">About Me</a></li>
+                                <li><a href="portfolio.html">Portfolio</a></li>
+                                <li><a href="index.html">Home</a></li>
+                </ul>
+                </nav>  
+            </header>
+     <section class="firstMain">
+            <h1><img src="images/contactmelogo.png" class="contactmelogo"></h1>
+            <div id="border-bottom"></div>
+
+            
+           
+            </section>
+
+<section class="secondMain">
+        <div class="contactbox">
+                
+                <form action="mailto:Dombek1989@gmail.com" enctype="text/plain" method="POST">
+        
+                    <p>Your name</p>
+                    <input type="text" name="personsName" placeholder="Name">
+                    <p>Email address</p>
+                    <input type="email" name="personsEmail" placeholder="Email">
+                    <p>Drop a line:</p><br>
+		            <textarea type="comment" cols="100" rows="10" name="personsComment"></textarea><br><br>
+                    <input type="submit" name="" class="subButton" value="Submit">
+                    <p id="lowertext">Talk to you soon!</p>
+                </form>
+                
+            </div>
+
+            
+</section>
+<section>
+    <h1 id="resources"></h1>
+        <div class="menucontainer">
+            <div class="mywork">My Work</div>
+            <div class="mystory">My Story</div>
+            <div class="contactme">Contact Me</div>
+        </div>
+        <div class="menulogocontainer">
+        <div><a href="portfolio.html" ><img src="images/portfoliologo.png" class="portfoliologo"></a></div>
+        <div><a href="aboutme.html" ><img src="images/aboutmelogo.png" class="aboutmelogo"></a></div>
+        <div><a href="contactme.html" ><img src="images/contactmelogo.png" class="contactmelogo"></a></div>
+        
+    </div>
+        
+</section>
+
+<footer>
+    <div class="containerbackground">
+                    
+                    
+    
+        <div class="mediacontainer">
+                <div><a href="https://www.instagram.com/dad.photos/" target="_blank"><img src="images/instaiconLogo.png" class="instalogo"></a></div>
+                <div><a href="https://www.linkedin.com/in/derek-dombek-905b58106/" target="_blank"><img src="images/In-Blue-34.png" class="linkedinlogo"></a></div>
+                <div><a href="https://github.com/derekadombek" target="_blank"><img src="images/GitHub-Mark-120px-plus.png" class="githublogo"></a></div>
+        </div>
+    </div>
+        <p>
+                <a href="tel:12163081700">(216) 308-1700</a><br/>
+                <a href="mailto:Dombek1989@gmail.com">Dombek1989@gmail.com</a><br/><br/>
+                <span style="color:blue">2019</span> &copy; <a href="index.html" class="copyright">Derek A Dombek</a>. All Rights Reserved.
+                </p>
+</footer>
+
+</div> 
+</body>
+</html>
