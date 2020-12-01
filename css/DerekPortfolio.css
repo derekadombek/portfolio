@@ -218,31 +218,27 @@ for my new portfolio page look. add flex, hover effects, while custom adding tho
       .secondMain {
         z-index: 600;
         background-color: white;
-        position: inherit;
-        
-        left:0;
-        right: 0;
+        margin: auto;
         width: 100%;
-        margin: auto auto;
         text-align: center;
-        padding-top: 20%;
-        padding-bottom: 20%;
-
+        padding-top: 5%;
+        padding-bottom: 5%;
         box-shadow: 5px 5px 40px rgb(0, 0, 0);
       }
       .folioContainer {
-        width: 200px;
-        
+        width: 100%;
         background: #fff;
-        margin: 80px 1px 20px;
+        position: center;
+        margin: auto;
         display: flex;
-        flex-direction: column;
-        flex-wrap: column;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
       }
       .folioContainer .box {
         position: relative;
-        width: 200px;
-        height: 150px;
+        width: 300px;
+        height: 199px;
         
         margin: 15px;
         box-sizing: border-box;
@@ -250,14 +246,10 @@ for my new portfolio page look. add flex, hover effects, while custom adding tho
         box-shadow: 3px 3px 10px rgb(0, 0, 0);
         border-radius: 10px;
       }
-      .folioContainer .box .imgBox {
-        position: relative;
-        
-        
-      }
       .folioContainer .box .imgBox img{
         max-width: 100%;
         max-height: 100%;
+        height: 200px;
         -webkit-transition: .5s; /* Safari */
       -webkit-transition-timing-function: ease-out; /* Safari */
       transition: .5s;
@@ -265,16 +257,16 @@ for my new portfolio page look. add flex, hover effects, while custom adding tho
       border-radius: 10px;
       }
       .folioContainer .box:hover .imgBox img{
-        opacity: .1;
+        opacity: .2;
       }
       
       .folioContainer .box .projectTitle {
         position: absolute;
-        top: 6px;
-        left: 6px;
-        
-        right: 10px;
+        top: 50px;
+        margin: auto;
+        width: 100%;
         opacity: 0;
+        font-weight: 200;
         -webkit-transition: .5s; /* Safari */
       -webkit-transition-timing-function: ease-in; /* Safari */
       transition: .3s;
@@ -283,38 +275,10 @@ for my new portfolio page look. add flex, hover effects, while custom adding tho
       .folioContainer .box:hover .projectTitle {
         opacity: 5;
       }
-      .folioContainer .box .projectTitle .content {
-        position: absolute;
-        font-weight: 700;
-        left: 10px;
-      }
-      .folioContainer .box .projectTitle .contentGame {
-        position: absolute;
-        font-weight: 700;
-        left: 6px;
-      }
-      .folioContainer .box .projectTitle .contentConvert{
-        position: absolute;
-        font-weight: 700;
-        left: .5px;
-      }
-      .folioContainer .box .projectTitle .content2 {
-        position: absolute;
-        top:70px;
-        left: 28px;
-      }
-      .folioContainer .box .projectTitle .content .bobsLang {
-        padding-left: 5px;
+      .folioContainer .box .projectTitle .content .lang {
         color: rgb(226, 134, 59);
       }
-      .folioContainer .box .projectTitle .contentGame .bobsLang {
-        padding-left: 6px;
-        color: rgb(226, 134, 59);
-      }
-      .folioContainer .box .projectTitle .contentConvert .bobsLang {
-        padding-left: 8px;
-        color: rgb(226, 134, 59);
-      }
+      
       .folioContainer .box .projectTitle .content2 button {
         background-color: #4CAF50; /* Green */
       border: none;
@@ -324,7 +288,7 @@ for my new portfolio page look. add flex, hover effects, while custom adding tho
       text-decoration: none;
       display: inline-block;
       font-size: 16px;
-      margin: 4px;
+      margin: 4px 2px;
       -webkit-transition-duration: 0.4s; /* Safari */
       transition-duration: 0.4s;
       cursor: pointer;
@@ -335,23 +299,20 @@ for my new portfolio page look. add flex, hover effects, while custom adding tho
       background-color: white;
       color: black;
       border: 2px solid #555555;
-      left: 10px;
+      left: 20px;
     }
     .folioContainer .box .projectTitle .content2 button:hover {
       background-color: #555555;
       color: white;
     }
     #sectionborder2 {
-      
       border: 2px solid #57b1dc;
       border-radius: 30px;
-      width: 235px;
-      margin: auto auto;
-      padding-left: 8%;
-      padding-right: 8%;
-      padding-bottom: 40px;
-      padding-top: 1px;
-      
+      margin: auto;
+      padding-left: 30px;
+      padding-right: 50px;
+      padding-bottom: 30px;
+      padding-top: 30px;
     }
       .thirdsection{
         margin-top: 40px;
@@ -425,6 +386,10 @@ for my new portfolio page look. add flex, hover effects, while custom adding tho
         font-family: 'Raleway', sans-serif;
         color: #fff;
         font-size: 16px;
+        
+      }
+      ::placeholder {
+        padding-left: 30%;
       }
 
       .contactbox textarea[type="comment"] {
@@ -438,7 +403,6 @@ for my new portfolio page look. add flex, hover effects, while custom adding tho
         background: #57b1dc;
         color: #fff;
         font-size: 18px;
-        width:25%;
         border-radius: 20px;
       }
       .contactbox input[type="submit"]:hover {
@@ -522,39 +486,36 @@ for my new portfolio page look. add flex, hover effects, while custom adding tho
       }
 
       .containerbackground {
-        z-index: 800;
+        z-index: 1;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         justify-content: space-around;
         position: fixed;
-
         border-radius: 15px;
-        width: 54px;
+        width: 48px;
         padding-left: 12px;
         background-color: gray;
-
-
-
-          opacity: 0.4;
-          left: 89%;
-        
-          padding-top: 150px;
-          margin-bottom: -21px;
-          bottom: 30%;
+        opacity: .9;
+        left: 86%;
+        bottom: 40%;
+        height: 150px;
       }
 
       .mediacontainer {
-        z-index: 1000;
+        z-index: 1500;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         justify-content: space-around;
         position: fixed;
-        left: 90%;
-        padding-top: 5px;
-        margin-bottom: -20px;
-        bottom: 30%;
+        margin: auto;
+        width: 48px;
+        opacity: 1;
+        padding-left: 12px;
+        left: 86%;
+        bottom: 40%;
+        height: 150px;
       }
 
       .instalogo {
@@ -677,7 +638,7 @@ for my new portfolio page look. add flex, hover effects, while custom adding tho
     }
 /*Break Point*/
 
-@media (max-width: 769px) and (min-width:641px) {
+@media (max-width: 1020px) and (min-width:641px) {
 
     @font-face {
       font-family: 'CaviarDreams';
@@ -885,25 +846,22 @@ for my new portfolio page look. add flex, hover effects, while custom adding tho
     .secondMain {
       z-index: 600;
       background-color: white;
-      position: relative;
-      margin-left: 0;
-      left:0;
-      right: 0;
+      margin: auto;
       width: 100%;
       text-align: center;
       padding-top: 5%;
       padding-bottom: 5%;
-    
       box-shadow: 5px 5px 40px rgb(0, 0, 0);
     }
     .folioContainer {
-      width: 400px;
-      max-width: 100%;
+      width: 100%;
       background: #fff;
-      margin: 80px 90px 20px;
+      position: center;
+      margin: auto;
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
+      justify-content: center;
     }
     .folioContainer .box {
       position: relative;
@@ -916,14 +874,10 @@ for my new portfolio page look. add flex, hover effects, while custom adding tho
       box-shadow: 3px 3px 10px rgb(0, 0, 0);
       border-radius: 10px;
     }
-    .folioContainer .box .imgBox {
-      position: relative;
-      
-      
-    }
     .folioContainer .box .imgBox img{
       max-width: 100%;
       max-height: 100%;
+      height: 200px;
       -webkit-transition: .5s; /* Safari */
     -webkit-transition-timing-function: ease-out; /* Safari */
     transition: .5s;
@@ -931,16 +885,16 @@ for my new portfolio page look. add flex, hover effects, while custom adding tho
     border-radius: 10px;
     }
     .folioContainer .box:hover .imgBox img{
-      opacity: .1;
+      opacity: .2;
     }
     
     .folioContainer .box .projectTitle {
       position: absolute;
       top: 50px;
-      left: 50px;
-      
-      right: 10px;
+      margin: auto;
+      width: 100%;
       opacity: 0;
+      font-weight: 200;
       -webkit-transition: .5s; /* Safari */
     -webkit-transition-timing-function: ease-in; /* Safari */
     transition: .3s;
@@ -949,38 +903,10 @@ for my new portfolio page look. add flex, hover effects, while custom adding tho
     .folioContainer .box:hover .projectTitle {
       opacity: 5;
     }
-    .folioContainer .box .projectTitle .content {
-      position: absolute;
-      font-weight: 900;
-      left: 10px;
-    }
-    .folioContainer .box .projectTitle .contentGame {
-      position: absolute;
-      font-weight: 900;
-      left: 6px;
-    }
-    .folioContainer .box .projectTitle .contentConvert{
-      position: absolute;
-      font-weight: 900;
-      left: .5px;
-    }
-    .folioContainer .box .projectTitle .content2 {
-      position: absolute;
-      top:70px;
-      left: 28px;
-    }
-    .folioContainer .box .projectTitle .content .bobsLang {
-      padding-left: 5px;
+    .folioContainer .box .projectTitle .content .lang {
       color: rgb(226, 134, 59);
     }
-    .folioContainer .box .projectTitle .contentGame .bobsLang {
-      padding-left: 6px;
-      color: rgb(226, 134, 59);
-    }
-    .folioContainer .box .projectTitle .contentConvert .bobsLang {
-      padding-left: 8px;
-      color: rgb(226, 134, 59);
-    }
+    
     .folioContainer .box .projectTitle .content2 button {
       background-color: #4CAF50; /* Green */
     border: none;
@@ -1008,16 +934,14 @@ for my new portfolio page look. add flex, hover effects, while custom adding tho
     color: white;
   }
   #sectionborder2 {
-    
     border: 2px solid #57b1dc;
     border-radius: 30px;
-    width: 500px;
-    margin: auto auto;
-    padding-left: 5%;
-    padding-right: 6%;
+    width: 50%;
+    margin: auto;
+    padding-left: 80px;
+    padding-right: 80px;
     padding-bottom: 80px;
-    padding-top: 10px;
-    
+    padding-top: 80px;
   }
     .thirdsection{
       margin-top: 80px;
@@ -1166,39 +1090,36 @@ for my new portfolio page look. add flex, hover effects, while custom adding tho
     }
 
     .containerbackground {
-      z-index: 800;
+      z-index: 1;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
       justify-content: space-around;
       position: fixed;
-
       border-radius: 15px;
-      width: 54px;
+      width: 48px;
       padding-left: 12px;
       background-color: gray;
-
-
-    
-        opacity: 0.4;
-        left: 93%;
-      
-        padding-top: 150px;
-        margin-bottom: -21px;
-        bottom: 30%;
+      opacity: .9;
+      left: 90%;
+      bottom: 40%;
+      height: 150px;
     }
 
     .mediacontainer {
-      z-index: 1000;
+      z-index: 1500;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
       justify-content: space-around;
       position: fixed;
-      left: 94%;
-      padding-top: 5px;
-      margin-bottom: -20px;
-      bottom: 30%;
+      margin: auto;
+      width: 48px;
+      opacity: 1;
+      padding-left: 12px;
+      left: 90%;
+      bottom: 40%;
+      height: 150px;
     }
 
     .instalogo {
@@ -1315,7 +1236,7 @@ for my new portfolio page look. add flex, hover effects, while custom adding tho
       color: white;
     }
 }
-@media (min-width:769px) {
+@media (max-width: 1440px) and (min-width: 1020px) {
 
   @font-face {
     font-family: 'CaviarDreams';
@@ -1508,27 +1429,22 @@ h1#resources {
   .secondMain {
     z-index: 600;
     background-color: white;
-    position: relative;
-    margin-left: 0;
-    left:0;
-    right: 0;
+    margin: auto;
     width: 100%;
     text-align: center;
     padding-top: 5%;
     padding-bottom: 5%;
-   
-  
-  
     box-shadow: 5px 5px 40px rgb(0, 0, 0);
   }
   .folioContainer {
-    width: 700px;
-    
+    width: 100%;
     background: #fff;
-    margin: 80px 60px 20px;
+    position: center;
+    margin: auto;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
   }
   .folioContainer .box {
     position: relative;
@@ -1541,14 +1457,10 @@ h1#resources {
     box-shadow: 3px 3px 10px rgb(0, 0, 0);
     border-radius: 10px;
   }
-  .folioContainer .box .imgBox {
-    position: relative;
-    
-    
-  }
   .folioContainer .box .imgBox img{
     max-width: 100%;
     max-height: 100%;
+    height: 200px;
     -webkit-transition: .5s; /* Safari */
   -webkit-transition-timing-function: ease-out; /* Safari */
   transition: .5s;
@@ -1556,16 +1468,16 @@ h1#resources {
   border-radius: 10px;
   }
   .folioContainer .box:hover .imgBox img{
-    opacity: .1;
+    opacity: .2;
   }
   
   .folioContainer .box .projectTitle {
     position: absolute;
     top: 50px;
-    left: 50px;
-    
-    right: 10px;
+    margin: auto;
+    width: 100%;
     opacity: 0;
+    font-weight: 200;
     -webkit-transition: .5s; /* Safari */
   -webkit-transition-timing-function: ease-in; /* Safari */
   transition: .3s;
@@ -1574,38 +1486,10 @@ h1#resources {
   .folioContainer .box:hover .projectTitle {
     opacity: 5;
   }
-  .folioContainer .box .projectTitle .content {
-    position: absolute;
-    font-weight: 900;
-    left: 10px;
-  }
-  .folioContainer .box .projectTitle .contentGame {
-    position: absolute;
-    font-weight: 900;
-    left: 6px;
-  }
-  .folioContainer .box .projectTitle .contentConvert{
-    position: absolute;
-    font-weight: 900;
-    left: .5px;
-  }
-  .folioContainer .box .projectTitle .content2 {
-    position: absolute;
-    top:70px;
-    left: 28px;
-  }
-  .folioContainer .box .projectTitle .content .bobsLang {
-    padding-left: 5px;
+  .folioContainer .box .projectTitle .content .lang {
     color: rgb(226, 134, 59);
   }
-  .folioContainer .box .projectTitle .contentGame .bobsLang {
-    padding-left: 6px;
-    color: rgb(226, 134, 59);
-  }
-  .folioContainer .box .projectTitle .contentConvert .bobsLang {
-    padding-left: 8px;
-    color: rgb(226, 134, 59);
-  }
+  
   .folioContainer .box .projectTitle .content2 button {
     background-color: #4CAF50; /* Green */
   border: none;
@@ -1633,16 +1517,14 @@ h1#resources {
   color: white;
 }
 #sectionborder2 {
-  
   border: 2px solid #57b1dc;
   border-radius: 30px;
-  width: 750px;
-  margin: auto auto;
-  padding-left: 5%;
-  padding-right: 6%;
+  width: 50%;
+  margin: auto;
+  padding-left: 80px;
+  padding-right: 80px;
   padding-bottom: 80px;
-  padding-top: 10px;
-  
+  padding-top: 80px;
 }
   .thirdsection{
     margin-top: 80px;
@@ -1792,27 +1674,21 @@ h1#resources {
   }
 
   .containerbackground {
-    z-index: 800;
+    z-index: 1;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-around;
     position: fixed;
-
     border-radius: 15px;
-    width: 54px;
+    width: 48px;
     padding-left: 12px;
     background-color: gray;
-
-
-  
-      opacity: .8;
-      left: 93%;
-    
-      padding-top: 150px;
-      margin-bottom: -21px;
-      bottom: 30%;
-  }
+    opacity: .9;
+    left: 92%;
+    bottom: 40%;
+    height: 150px;
+}
 
   .mediacontainer {
     z-index: 1500;
@@ -1821,10 +1697,13 @@ h1#resources {
     align-items: flex-start;
     justify-content: space-around;
     position: fixed;
-    left: 94%;
-    padding-top: 5px;
-    margin-bottom: -20px;
-    bottom: 30%;
+    margin: auto;
+    width: 48px;
+    opacity: 1;
+    padding-left: 12px;
+    left: 92%;
+    bottom: 40%;
+    height: 150px;
   }
 
   .instalogo {
@@ -1940,3 +1819,1174 @@ h1#resources {
     color: white;
   }
 }
+
+@media (max-width: 1700px) and (min-width: 1440px) {
+
+  @font-face {
+    font-family: 'CaviarDreams';
+    src: url('../fonts/CaviarDreams-webfont.eot');
+    src: url('../fonts/CaviarDreams-webfont.eot') format('embedded-opentype'),
+        url('../fonts/CaviarDreams-webfont.svg') format('svg'),
+          url('../fonts/CaviarDreams-webfont.ttf') format('truetype'),
+          url('../fonts/CaviarDreams-webfont.woff') format('woff');
+    font-weight: normal;
+  }
+
+  html {
+    
+    background-color: #e5f3f5;
+    background: linear-gradient(
+      to bottom,
+      rgba(206, 206, 206, 0),
+      rgba(10,5,10, 30)
+    ),url(../images/IMG_0645.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover; 
+    margin: 0;
+    padding:0;
+    height: 100%;
+    box-sizing: border-box;
+    
+  }
+
+
+  body {
+    margin: 0;
+    font-family: CaviarDreams, cursive;
+  }
+
+h1#resources {
+  margin-top: 15%;
+}
+  #outerwrap {
+    margin-top: 150px;
+  }
+  .mainlogo {
+    z-index: 500;
+    display: block;
+    position: fixed;
+    float: left;
+    height: 150px;
+    width: 200px;
+    top: -18px;
+    left: 5px;
+  }
+  /*clock styles*/
+    div#countdown {
+      font-size: 30px;
+      margin-bottom: 4%;
+      
+
+    }
+    div#countdown span {
+      color: blue;
+
+    }
+    .secondMain p {
+      font-size: 20px;
+
+    }
+    .secondMain h1 {
+      color: #000;
+
+    }
+    
+
+  h1 {
+    color: white;
+    font-size: 50px;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    font-weight: normal;
+    text-transform: none;
+    margin-top: 80px;
+  }
+
+  #border-bottom {
+    margin-left: 30%;
+    margin-right: 30%;
+    border-bottom: 2px solid #57b1dc;
+  }
+  .hamburger {
+    display: none !important;
+    margin-left: 50%;
+    position: relative;
+    display: inline-block;
+    
+  }
+  .hamburger a {
+    text-decoration: none;
+  }
+
+  .hamburger-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+    
+  }
+  #aboutmewriting h1{
+    color: black;
+    margin-top: 2px;
+  }
+  #aboutmewriting {
+    border: 2px solid #57b1dc;
+    border-radius: 30px;
+    width: 50%;
+    margin: auto auto;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 40px;
+    padding-top: 20px;
+  }
+  .hamburger:hover .hamburger-content {
+    display: block;
+  }
+
+  .topbar {
+    background-color: rgba(51, 51, 51, 0.959);
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-bottom: 29px;
+    padding-top: 29px;
+    z-index: 400;
+    transition: .1s;
+    box-shadow: 5px 5px 50px rgb(0, 0, 0);
+  }
+
+
+
+  #main-menu a {
+    visibility:visible;
+    box-sizing: border-box;
+    float: right;
+    
+    color: #f2f2f2;  
+    text-align: center;
+    padding-top: 0;
+    padding: 20px 30px;
+    padding-bottom: 20px;
+    margin-right: 20px;
+    margin-top: 0;
+    text-decoration: none;
+  
+    
+  }
+
+
+  #main-menu a:hover {
+    background: #ddd;
+    color: black;
+    
+    border-bottom-left-radius: 18%;
+    border-bottom-right-radius: 18%;
+    border-top-left-radius: 18%;
+    border-top-right-radius: 18%;
+  }
+
+  .firstMain {
+  align-content: center; 
+
+  font-family: 'Raleway', sans-serif;
+  padding-top: 1px;
+  padding-left: 50px;
+  padding-right: 50px;
+
+  padding-bottom: 100px;
+    
+  }
+
+  .portfoliologotop {
+    position: inherit;
+    
+    margin: auto auto;
+  }
+  
+
+
+  .secondMain {
+    z-index: 600;
+    background-color: white;
+    margin: auto;
+    width: 100%;
+    text-align: center;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    box-shadow: 5px 5px 40px rgb(0, 0, 0);
+  }
+  .folioContainer {
+    width: 100%;
+    background: #fff;
+    position: center;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .folioContainer .box {
+    position: relative;
+    width: 300px;
+    height: 199px;
+    
+    margin: 15px;
+    box-sizing: border-box;
+    display: inline-block;
+    box-shadow: 3px 3px 10px rgb(0, 0, 0);
+    border-radius: 10px;
+  }
+  .folioContainer .box .imgBox img{
+    max-width: 100%;
+    max-height: 100%;
+    height: 200px;
+    -webkit-transition: .5s; /* Safari */
+  -webkit-transition-timing-function: ease-out; /* Safari */
+  transition: .5s;
+  transition-timing-function: ease-out;
+  border-radius: 10px;
+  }
+  .folioContainer .box:hover .imgBox img{
+    opacity: .2;
+  }
+  
+  .folioContainer .box .projectTitle {
+    position: absolute;
+    top: 50px;
+    margin: auto;
+    width: 100%;
+    opacity: 0;
+    font-weight: 200;
+    -webkit-transition: .5s; /* Safari */
+  -webkit-transition-timing-function: ease-in; /* Safari */
+  transition: .3s;
+  transition-timing-function: ease-in;
+  }
+  .folioContainer .box:hover .projectTitle {
+    opacity: 5;
+  }
+  .folioContainer .box .projectTitle .content .lang {
+    color: rgb(226, 134, 59);
+  }
+  
+  .folioContainer .box .projectTitle .content2 button {
+    background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 4px;
+  
+}
+.folioContainer .box .projectTitle .content2 button {
+  background-color: white;
+  color: black;
+  border: 2px solid #555555;
+  left: 20px;
+}
+.folioContainer .box .projectTitle .content2 button:hover {
+  background-color: #555555;
+  color: white;
+}
+#sectionborder2 {
+  border: 2px solid #57b1dc;
+  border-radius: 30px;
+  width: 50%;
+  margin: auto;
+  padding-left: 80px;
+  padding-right: 80px;
+  padding-bottom: 80px;
+  padding-top: 80px;
+}
+  .thirdsection{
+    margin-top: 80px;
+  }
+  /*contact form*/
+  .radiocontainer {
+    margin-left: 15%;
+  }
+  
+  label {
+    color: rgb(211, 135, 135)
+  }
+  .contactbox{
+    width: 60%;
+    margin: auto auto;
+    background:rgba(51, 51, 51, 0.801);
+    color: #fff;
+  
+
+    box-shadow: 2px 2px 80px rgb(0, 0, 0);
+    border-radius: 60px;
+    box-sizing: border-box;
+    padding: 5% 5%;
+  }
+
+
+  .contactbox h1{
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 22px;
+  }
+
+  .contactbox p{
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+  }
+  textarea {
+    width: 70%;
+    
+  }
+
+  .contactbox input {
+    width: 50%;
+    margin-bottom: 20px;
+    font-family: 'Raleway', sans-serif;
+  }
+
+  .contactbox input[type="text"], input[type="email"] {
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    font-family: 'Raleway', sans-serif;
+    color: #fff;
+    font-size: 16px;
+  }
+
+  .contactbox textarea[type="comment"] {
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+  }
+  .contactbox input[type="submit"] {
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #57b1dc;
+    color: #fff;
+    font-size: 18px;
+    width:25%;
+    border-radius: 20px;
+  }
+  .contactbox input[type="submit"]:hover {
+    cursor: pointer;
+    background: rgb(226, 134, 59);
+    color: #000;
+  }
+
+  #lowertext {
+    
+    font-size: 10px;
+    font-family: 'Raleway', sans-serif;
+  }
+  /*end contact form*/
+
+  #sectionborder {
+  
+    border: 2px solid #57b1dc;
+    border-radius: 30px;
+    width: 50%;
+    margin: auto auto;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 40px;
+    padding-top: 20px;
+  }
+
+  #sectionborder p {
+    margin-top: 13px;
+  }
+
+
+
+  li {
+    list-style-type: none;
+    padding-top: 0;
+    margin-top: 0;
+  }
+  .my-picture {
+    
+    width: 200px;
+    margin: auto auto;
+    border-radius: 100%;
+    margin-bottom: 15px;
+    
+    
+    
+  }
+
+  footer {
+    position: absolute;
+    padding-bottom: 2rem;
+    padding-top: 1rem;
+    right: 0;
+    left: 0;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    
+    background-color: rgba(0, 0, 0, 0.445);
+    
+  }
+
+  footer a {
+    text-decoration: none;
+    color: white;
+  }
+  .copyright {
+    color: rgb(226, 134, 59);
+    
+  }
+
+  .copyright:hover {
+    text-decoration: underline;
+  }
+
+  .containerbackground {
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    position: fixed;
+    border-radius: 15px;
+    width: 48px;
+    padding-left: 12px;
+    background-color: gray;
+    opacity: .9;
+    left: 95%;
+    bottom: 40%;
+    height: 150px;
+}
+
+  .mediacontainer {
+    z-index: 1500;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    position: fixed;
+    margin: auto;
+    width: 48px;
+    opacity: 1;
+    padding-left: 12px;
+    left: 95%;
+    bottom: 40%;
+    height: 150px;
+  }
+
+  .instalogo {
+    z-index: 1000;
+    height: 50px;
+    width: 53px;
+    margin-bottom: 5px;
+    opacity: 100%;
+    margin-left: -8px;
+    align-content: center;
+  }
+
+  .linkedinlogo {
+    z-index: 1000;
+    height: 34px;
+    width: 36px;
+    margin-bottom: 8px;
+    opacity: 10;
+    
+    align-content: center;
+  }
+
+  .githublogo {
+    z-index: 1000;
+    height: 35px;
+    width: 37px;
+    margin-bottom: 8px;
+    align-content: center;
+    opacity: 3;
+  }
+
+
+  .instalogo:hover {
+    opacity: 0.3;
+  }
+  .linkedinlogo:hover {
+    opacity: 0.3;
+  }
+  .githublogo:hover {
+    opacity: 0.3;
+  }
+
+
+  .menulogocontainer {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 15%;
+    
+  }
+
+
+
+
+  .menucontainer {
+    display: flex;
+    justify-content: space-around;
+    margin-left: 10px;
+    margin-bottom: 50px;
+  }
+  .portfoliologo {
+        
+  
+    transition: transform .7s;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+        }
+        .portfoliologo:hover {
+          -ms-transform: scale(1.5); /* IE 9 */
+          -webkit-transform: scale(1.5); /* Safari 3-8 */
+          transform: scale(1.5); 
+        }
+
+  
+  .aboutmelogo {
+        
+  
+    transition: transform .7s;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+        }
+        .aboutmelogo:hover {
+          -ms-transform: scale(1.5); /* IE 9 */
+          -webkit-transform: scale(1.5); /* Safari 3-8 */
+          transform: scale(1.5); 
+        }
+
+  
+  .contactmelogo {
+        
+  
+    transition: transform .7s;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+        }
+        .contactmelogo:hover {
+          -ms-transform: scale(1.5); /* IE 9 */
+          -webkit-transform: scale(1.5); /* Safari 3-8 */
+          transform: scale(1.5); 
+        }
+
+  .mywork {
+    color: white;
+  }
+
+  .mystory {
+    color: white;
+  }
+
+  .contactme {
+    color: white;
+  }
+}
+
+@media (min-width: 1700px) {
+
+  @font-face {
+    font-family: 'CaviarDreams';
+    src: url('../fonts/CaviarDreams-webfont.eot');
+    src: url('../fonts/CaviarDreams-webfont.eot') format('embedded-opentype'),
+        url('../fonts/CaviarDreams-webfont.svg') format('svg'),
+          url('../fonts/CaviarDreams-webfont.ttf') format('truetype'),
+          url('../fonts/CaviarDreams-webfont.woff') format('woff');
+    font-weight: normal;
+  }
+
+  html {
+    
+    background-color: #e5f3f5;
+    background: linear-gradient(
+      to bottom,
+      rgba(206, 206, 206, 0),
+      rgba(10,5,10, 30)
+    ),url(../images/IMG_0645.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover; 
+    margin: 0;
+    padding:0;
+    height: 100%;
+    box-sizing: border-box;
+    
+  }
+
+
+  body {
+    margin: 0;
+    font-family: CaviarDreams, cursive;
+  }
+
+h1#resources {
+  margin-top: 15%;
+}
+  #outerwrap {
+    margin-top: 150px;
+  }
+  .mainlogo {
+    z-index: 500;
+    display: block;
+    position: fixed;
+    float: left;
+    height: 150px;
+    width: 200px;
+    top: -18px;
+    left: 5px;
+  }
+  /*clock styles*/
+    div#countdown {
+      font-size: 30px;
+      margin-bottom: 4%;
+      
+
+    }
+    div#countdown span {
+      color: blue;
+
+    }
+    .secondMain p {
+      font-size: 20px;
+
+    }
+    .secondMain h1 {
+      color: #000;
+
+    }
+    
+
+  h1 {
+    color: white;
+    font-size: 50px;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    font-weight: normal;
+    text-transform: none;
+    margin-top: 80px;
+  }
+
+  #border-bottom {
+    margin-left: 30%;
+    margin-right: 30%;
+    border-bottom: 2px solid #57b1dc;
+  }
+  .hamburger {
+    display: none !important;
+    margin-left: 50%;
+    position: relative;
+    display: inline-block;
+    
+  }
+  .hamburger a {
+    text-decoration: none;
+  }
+
+  .hamburger-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+    
+  }
+  #aboutmewriting h1{
+    color: black;
+    margin-top: 2px;
+  }
+  #aboutmewriting {
+    border: 2px solid #57b1dc;
+    border-radius: 30px;
+    width: 50%;
+    margin: auto auto;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 40px;
+    padding-top: 20px;
+  }
+  .hamburger:hover .hamburger-content {
+    display: block;
+  }
+
+  .topbar {
+    background-color: rgba(51, 51, 51, 0.959);
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-bottom: 29px;
+    padding-top: 29px;
+    z-index: 400;
+    transition: .1s;
+    box-shadow: 5px 5px 50px rgb(0, 0, 0);
+  }
+
+
+
+  #main-menu a {
+    visibility:visible;
+    box-sizing: border-box;
+    float: right;
+    
+    color: #f2f2f2;  
+    text-align: center;
+    padding-top: 0;
+    padding: 20px 30px;
+    padding-bottom: 20px;
+    margin-right: 20px;
+    margin-top: 0;
+    text-decoration: none;
+  
+    
+  }
+
+
+  #main-menu a:hover {
+    background: #ddd;
+    color: black;
+    
+    border-bottom-left-radius: 18%;
+    border-bottom-right-radius: 18%;
+    border-top-left-radius: 18%;
+    border-top-right-radius: 18%;
+  }
+
+  .firstMain {
+  align-content: center; 
+
+  font-family: 'Raleway', sans-serif;
+  padding-top: 1px;
+  padding-left: 50px;
+  padding-right: 50px;
+
+  padding-bottom: 100px;
+    
+  }
+
+  .portfoliologotop {
+    position: inherit;
+    
+    margin: auto auto;
+  }
+  
+
+
+  .secondMain {
+    z-index: 600;
+    background-color: white;
+    margin: auto;
+    width: 100%;
+    text-align: center;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    box-shadow: 5px 5px 40px rgb(0, 0, 0);
+  }
+  .folioContainer {
+    width: 100%;
+    background: #fff;
+    position: center;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .folioContainer .box {
+    position: relative;
+    width: 300px;
+    height: 199px;
+    
+    margin: 15px;
+    box-sizing: border-box;
+    display: inline-block;
+    box-shadow: 3px 3px 10px rgb(0, 0, 0);
+    border-radius: 10px;
+  }
+  .folioContainer .box .imgBox img{
+    max-width: 100%;
+    max-height: 100%;
+    height: 200px;
+    -webkit-transition: .5s; /* Safari */
+  -webkit-transition-timing-function: ease-out; /* Safari */
+  transition: .5s;
+  transition-timing-function: ease-out;
+  border-radius: 10px;
+  }
+  .folioContainer .box:hover .imgBox img{
+    opacity: .2;
+  }
+  
+  .folioContainer .box .projectTitle {
+    position: absolute;
+    top: 50px;
+    margin: auto;
+    width: 100%;
+    opacity: 0;
+    font-weight: 200;
+    -webkit-transition: .5s; /* Safari */
+  -webkit-transition-timing-function: ease-in; /* Safari */
+  transition: .3s;
+  transition-timing-function: ease-in;
+  }
+  .folioContainer .box:hover .projectTitle {
+    opacity: 5;
+  }
+  .folioContainer .box .projectTitle .content .lang {
+    color: rgb(226, 134, 59);
+  }
+  
+  .folioContainer .box .projectTitle .content2 button {
+    background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 4px;
+  
+}
+.folioContainer .box .projectTitle .content2 button {
+  background-color: white;
+  color: black;
+  border: 2px solid #555555;
+  left: 20px;
+}
+.folioContainer .box .projectTitle .content2 button:hover {
+  background-color: #555555;
+  color: white;
+}
+#sectionborder2 {
+  border: 2px solid #57b1dc;
+  border-radius: 30px;
+  width: 50%;
+  margin: auto;
+  padding-left: 80px;
+  padding-right: 80px;
+  padding-bottom: 80px;
+  padding-top: 80px;
+}
+  .thirdsection{
+    margin-top: 80px;
+  }
+  /*contact form*/
+  .radiocontainer {
+    margin-left: 15%;
+  }
+  
+  label {
+    color: rgb(211, 135, 135)
+  }
+  .contactbox{
+    width: 60%;
+    margin: auto auto;
+    background:rgba(51, 51, 51, 0.801);
+    color: #fff;
+  
+
+    box-shadow: 2px 2px 80px rgb(0, 0, 0);
+    border-radius: 60px;
+    box-sizing: border-box;
+    padding: 5% 5%;
+  }
+
+
+  .contactbox h1{
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 22px;
+  }
+
+  .contactbox p{
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+  }
+  textarea {
+    width: 70%;
+    
+  }
+
+  .contactbox input {
+    width: 50%;
+    margin-bottom: 20px;
+    font-family: 'Raleway', sans-serif;
+  }
+
+  .contactbox input[type="text"], input[type="email"] {
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    font-family: 'Raleway', sans-serif;
+    color: #fff;
+    font-size: 16px;
+  }
+
+  .contactbox textarea[type="comment"] {
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+  }
+  .contactbox input[type="submit"] {
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #57b1dc;
+    color: #fff;
+    font-size: 18px;
+    width:25%;
+    border-radius: 20px;
+  }
+  .contactbox input[type="submit"]:hover {
+    cursor: pointer;
+    background: rgb(226, 134, 59);
+    color: #000;
+  }
+
+  #lowertext {
+    
+    font-size: 10px;
+    font-family: 'Raleway', sans-serif;
+  }
+  /*end contact form*/
+
+  #sectionborder {
+  
+    border: 2px solid #57b1dc;
+    border-radius: 30px;
+    width: 50%;
+    margin: auto auto;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 40px;
+    padding-top: 20px;
+  }
+
+  #sectionborder p {
+    margin-top: 13px;
+  }
+
+
+
+  li {
+    list-style-type: none;
+    padding-top: 0;
+    margin-top: 0;
+  }
+  .my-picture {
+    
+    width: 200px;
+    margin: auto auto;
+    border-radius: 100%;
+    margin-bottom: 15px;
+    
+    
+    
+  }
+
+  footer {
+    position: absolute;
+    padding-bottom: 2rem;
+    padding-top: 1rem;
+    right: 0;
+    left: 0;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    
+    background-color: rgba(0, 0, 0, 0.445);
+    
+  }
+
+  footer a {
+    text-decoration: none;
+    color: white;
+  }
+  .copyright {
+    color: rgb(226, 134, 59);
+    
+  }
+
+  .copyright:hover {
+    text-decoration: underline;
+  }
+
+  .containerbackground {
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    position: fixed;
+    border-radius: 15px;
+    width: 48px;
+    padding-left: 12px;
+    background-color: gray;
+    opacity: .9;
+    left: 96%;
+    bottom: 40%;
+    height: 150px;
+}
+
+  .mediacontainer {
+    z-index: 1500;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    position: fixed;
+    margin: auto;
+    width: 48px;
+    opacity: 1;
+    padding-left: 12px;
+    left: 96%;
+    bottom: 40%;
+    height: 150px;
+  }
+
+  .instalogo {
+    z-index: 1000;
+    height: 50px;
+    width: 53px;
+    margin-bottom: 5px;
+    opacity: 100%;
+    margin-left: -8px;
+    align-content: center;
+  }
+
+  .linkedinlogo {
+    z-index: 1000;
+    height: 34px;
+    width: 36px;
+    margin-bottom: 8px;
+    opacity: 10;
+    
+    align-content: center;
+  }
+
+  .githublogo {
+    z-index: 1000;
+    height: 35px;
+    width: 37px;
+    margin-bottom: 8px;
+    align-content: center;
+    opacity: 3;
+  }
+
+
+  .instalogo:hover {
+    opacity: 0.3;
+  }
+  .linkedinlogo:hover {
+    opacity: 0.3;
+  }
+  .githublogo:hover {
+    opacity: 0.3;
+  }
+
+
+  .menulogocontainer {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 15%;
+    
+  }
+
+
+
+
+  .menucontainer {
+    display: flex;
+    justify-content: space-around;
+    margin-left: 10px;
+    margin-bottom: 50px;
+  }
+  .portfoliologo {
+        
+  
+    transition: transform .7s;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+        }
+        .portfoliologo:hover {
+          -ms-transform: scale(1.5); /* IE 9 */
+          -webkit-transform: scale(1.5); /* Safari 3-8 */
+          transform: scale(1.5); 
+        }
+
+  
+  .aboutmelogo {
+        
+  
+    transition: transform .7s;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+        }
+        .aboutmelogo:hover {
+          -ms-transform: scale(1.5); /* IE 9 */
+          -webkit-transform: scale(1.5); /* Safari 3-8 */
+          transform: scale(1.5); 
+        }
+
+  
+  .contactmelogo {
+        
+  
+    transition: transform .7s;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+        }
+        .contactmelogo:hover {
+          -ms-transform: scale(1.5); /* IE 9 */
+          -webkit-transform: scale(1.5); /* Safari 3-8 */
+          transform: scale(1.5); 
+        }
+
+  .mywork {
+    color: white;
+  }
+
+  .mystory {
+    color: white;
+  }
+
+  .contactme {
+    color: white;
+  }
+}
+
+
+
