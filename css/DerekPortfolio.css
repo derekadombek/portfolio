@@ -247,7 +247,7 @@ for my new portfolio page look. add flex, hover effects, while custom adding tho
         box-sizing: border-box;
         display: inline-block;
         box-shadow: 3px 3px 10px rgb(0, 0, 0);
-        border-radius: 10px;
+
       }
       .folioContainer .box .imgBox img{
         max-width: 100%;
@@ -257,7 +257,6 @@ for my new portfolio page look. add flex, hover effects, while custom adding tho
       -webkit-transition-timing-function: ease-out; /* Safari */
       transition: .5s;
       transition-timing-function: ease-out;
-      border-radius: 10px;
       }
       .folioContainer .box:hover .imgBox img{
         opacity: .2;
@@ -295,7 +294,6 @@ for my new portfolio page look. add flex, hover effects, while custom adding tho
       -webkit-transition-duration: 0.4s; /* Safari */
       transition-duration: 0.4s;
       cursor: pointer;
-      border-radius: 4px;
       
     }
     .folioContainer .box .projectTitle .content2 button {
@@ -1456,7 +1454,6 @@ h1#resources {
     box-sizing: border-box;
     display: inline-block;
     box-shadow: 3px 3px 10px rgb(0, 0, 0);
-    border-radius: 10px;
   }
   .folioContainer .box .imgBox img{
     max-width: 100%;
@@ -1466,7 +1463,6 @@ h1#resources {
   -webkit-transition-timing-function: ease-out; /* Safari */
   transition: .5s;
   transition-timing-function: ease-out;
-  border-radius: 10px;
   }
   .folioContainer .box:hover .imgBox img{
     opacity: .2;
@@ -1504,7 +1500,6 @@ h1#resources {
   -webkit-transition-duration: 0.4s; /* Safari */
   transition-duration: 0.4s;
   cursor: pointer;
-  border-radius: 4px;
   
 }
 .folioContainer .box .projectTitle .content2 button {
@@ -1520,12 +1515,8 @@ h1#resources {
 #sectionborder2 {
   border: 2px solid #57b1dc;
   border-radius: 30px;
-  width: 50%;
-  margin: auto;
-  padding-left: 80px;
-  padding-right: 80px;
-  padding-bottom: 80px;
-  padding-top: 80px;
+  padding-bottom: 40px;
+  padding-top: 40px;
 }
   .thirdsection{
     margin-top: 80px;
