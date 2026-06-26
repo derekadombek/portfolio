@@ -1,0 +1,56 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { caseStudies } from '../../data/caseStudies';
+import { services } from '../../data/services';
+
+export function getStaticPaths() {
+  return caseStudies.map((study) => ({
+    params: { slug: study.slug },
+    props: { study },
+  }));
+}
+
+const { study } = Astro.props;
+const service = services.find((s) => s.slug === study.service);
+---
+
+<BaseLayout
+  title={`${study.title} — Derek Dombek`}
+  description={study.problem}
+>
+  <article class="case-study">
+    <a class="back-link" href="/portfolio/">&larr; All work</a>
+
+    <header class="cs-header">
+      <h1>{study.title}</h1>
+      {service && (
+        <p class="cs-service">
+          Part of: <a href={`/services/#${service.slug}`}>{service.name}</a>
+        </p>
+      )}
+    </header>
+
+    <img class="cs-hero-img" src={study.diagram} alt={`${study.title} architecture diagram`} width="1440" height="648" />
+
+    <section class="paper prose">
+      <h2>The problem</h2>
+      <p>{study.problem}</p>
+
+      <h2>What I built</h2>
+      <p>{study.solution}</p>
+
+      <h2>Stack</h2>
+      <ul class="tag-list">
+        {study.stack.map((s) => <li>{s}</li>)}
+      </ul>
+
+      <h2>Outcome</h2>
+      <p>{study.outcome}</p>
+    </section>
+
+    <section class="cs-cta">
+      <p>Want to see this in action, or set it up for your business?</p>
+      <a class="btn btn-accent" href="/contact/">Request a walkthrough</a>
+    </section>
+  </article>
+</BaseLayout>

@@ -1,0 +1,22 @@
+---
+import type { CaseStudy } from '../data/caseStudies';
+
+interface Props {
+  study: CaseStudy;
+}
+const { study } = Astro.props;
+---
+
+<a class="cs-card" href={`/portfolio/${study.slug}/`}>
+  <div class="cs-media">
+    <img src={study.diagram} alt={`${study.title} architecture diagram`} width="480" height="300" loading="lazy" />
+  </div>
+  <div class="cs-body">
+    <h3 class="cs-title">{study.title}</h3>
+    <p class="cs-problem">{study.problem}</p>
+    <ul class="cs-stack">
+      {study.stack.slice(0, 3).map((s) => <li>{s}</li>)}
+    </ul>
+    <span class="cs-more">How I solve it &rarr;</span>
+  </div>
+</a>

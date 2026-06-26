@@ -1,0 +1,111 @@
+---
+import { Image } from 'astro:assets';
+import logo from '../assets/logos/logo2.png';
+
+const links = [
+  { href: '/', label: 'Home' },
+  { href: '/services/', label: 'Services' },
+  { href: '/portfolio/', label: 'Work' },
+  { href: '/about/', label: 'About' },
+  { href: '/contact/', label: 'Contact' },
+];
+
+const path = Astro.url.pathname;
+const isCurrent = (href: string) =>
+  href === '/' ? path === '/' : path.startsWith(href);
+---
+
+<header class="topbar" id="topbar">
+  <a href="/" class="logo" aria-label="Home">
+    <Image src={logo} alt="Derek Dombek logo" width={200} height={150} />
+  </a>
+
+  <button
+    class="nav-toggle"
+    type="button"
+    aria-expanded="false"
+    aria-controls="main-nav"
+    aria-label="Toggle navigation menu"
+  >
+    <span></span>
+  </button>
+
+  <nav class="main-nav" id="main-nav" aria-label="Primary">
+    <ul>
+      {links.map((l) => (
+        <li>
+          <a href={l.href} aria-current={isCurrent(l.href) ? 'page' : undefined}>
+            {l.label}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </nav>
+</header>
+
+<script>
+  const toggle = document.querySelector<HTMLButtonElement>('.nav-toggle');
+  const nav = document.querySelector<HTMLElement>('#main-nav');
+  const bar = document.querySelector<HTMLElement>('#topbar');
+
+  const isOpen = () => toggle?.getAttribute('aria-expanded') === 'true';
+
+  function setMenu(open: boolean) {
+    toggle?.setAttribute('aria-expanded', String(open));
+    nav?.classList.toggle('open', open);
+    update(); // reflect the open state in the bar's appearance immediately
+  }
+
+  // Hamburger toggle
+  toggle?.addEventListener('click', () => setMenu(!isOpen()));
+
+  // Close the menu on Escape, on a click outside it, and after tapping a link.
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && isOpen()) {
+      setMenu(false);
+      toggle?.focus();
+    }
+  });
+  document.addEventListener('click', (e) => {
+    const target = e.target as Node;
+    if (isOpen() && !nav?.contains(target) && !toggle?.contains(target)) {
+      setMenu(false);
+    }
+  });
+  nav?.querySelectorAll('a').forEach((a) =>
+    a.addEventListener('click', () => setMenu(false))
+  );
+
+  // Hide the bar on scroll-down, reveal on scroll-up (replaces jQuery scroll.js).
+  // rAF-throttled so we touch the DOM once per frame, with a small dead-zone so
+  // jitter doesn't flip it.
+  let lastY = window.scrollY;
+  let ticking = false;
+
+  function update() {
+    const y = window.scrollY;
+    const delta = y - lastY;
+    const menuOpen = nav?.classList.contains('open') ?? false;
+    // keep the bar up while the menu is open or near the top of the page
+    if (menuOpen || y <= 120) {
+      bar?.classList.remove('is-hidden');
+    } else if (Math.abs(delta) > 4) {
+      bar?.classList.toggle('is-hidden', delta > 0);
+    }
+    lastY = y;
+    ticking = false;
+  }
+
+  window.addEventListener(
+    'scroll',
+    () => {
+      if (!ticking) {
+        ticking = true;
+        requestAnimationFrame(update);
+      }
+    },
+    { passive: true }
+  );
+
+  update(); // set the correct state on load (e.g. when refreshed mid-page)
+</script>

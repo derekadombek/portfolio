@@ -1,0 +1,43 @@
+---
+import { Image } from 'astro:assets';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SectionMenu from '../components/SectionMenu.astro';
+import logo from '../assets/logos/aboutmelogo.png';
+---
+
+<BaseLayout
+  title="About — Derek Dombek"
+  description="From touring musician to U.S. Army veteran to software developer — the story of how Derek Dombek found his way into tech."
+>
+  <section class="hero">
+    <h1><Image class="page-logo" src={logo} alt="About me" width={150} height={150} /></h1>
+    <hr class="rule" />
+  </section>
+
+  <section class="paper prose">
+    <p>
+      I was born in Stuart, Florida, but moved to Cleveland, Ohio when I was three
+      and was raised there until I graduated high school. The traditional college
+      path didn't feel right at the time, so instead I fell in love with playing
+      music in bands and touring all over the country.
+    </p>
+    <p>
+      After a few years, the road caught up with me. In 2013 I joined the United
+      States Army — a decision that taught me how to truly grow up. I served a tour in Afghanistan and had the privilege of getting to
+      know people from every kind of background.
+    </p>
+    <p>
+      During that deployment I became determined to build something lasting when I
+      got home. I'd always had an interest in creation and design, and that's when
+      computer science clicked for me. Once I was back, I enrolled in the College of
+      Western Idaho's Software Development program. It felt like being a mechanic —
+      just with a computer instead of hand or power tools.
+    </p>
+    <p>
+      The future is bright, and so is the tech industry. I couldn't be more excited
+      to be a part of it.
+    </p>
+  </section>
+
+  <SectionMenu />
+</BaseLayout>

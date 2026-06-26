@@ -1,0 +1,24 @@
+---
+import { Image } from 'astro:assets';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CaseStudyCard from '../components/CaseStudyCard.astro';
+import { caseStudies } from '../data/caseStudies';
+import logo from '../assets/logos/portfoliologo.png';
+---
+
+<BaseLayout
+  title="Work — Derek Dombek"
+  description="DevOps and infrastructure case studies for small businesses — plus earlier games and sites built for fun."
+>
+  <section class="hero">
+    <h1><Image class="page-logo" src={logo} alt="Work" width={150} height={150} /></h1>
+    <p class="hero-sub">
+      Real infrastructure work, framed around the problems small businesses actually have.
+    </p>
+    <hr class="rule" />
+  </section>
+
+  <section class="cs-grid">
+    {caseStudies.map((study) => <CaseStudyCard study={study} />)}
+  </section>
+</BaseLayout>

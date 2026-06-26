@@ -1,0 +1,46 @@
+---
+import { Image } from 'astro:assets';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SectionMenu from '../components/SectionMenu.astro';
+import { services } from '../data/services';
+import headshot from '../assets/photos/headshot.jpeg';
+---
+
+<BaseLayout
+  title="Derek Dombek — Infrastructure & DevOps for Small Businesses"
+  description="I bring enterprise-grade infrastructure reliability to small businesses — your website and tools hosted, automated, backed up, and monitored so they never silently break."
+>
+  <section class="hero hero-lead">
+    <Image class="headshot" src={headshot} alt="Portrait of Derek Dombek" width={240} height={240} />
+    <h1>Reliable infrastructure for small businesses.</h1>
+    <p class="hero-sub">
+      I host, automate, back up, and monitor your website and tools — so they never
+      silently break, and you can stop worrying about them.
+    </p>
+    <div class="hero-cta">
+      <a class="btn btn-accent" href="/contact/">Book a free audit</a>
+      <a class="btn" href="/services/">See what I do</a>
+    </div>
+    <hr class="rule" />
+  </section>
+
+  <section class="home-services">
+    {services.slice(0, 3).map((s) => (
+      <a class="home-service" href={`/services/#${s.slug}`}>
+        <h3>{s.name}</h3>
+        <p>{s.tagline}</p>
+      </a>
+    ))}
+  </section>
+
+  <section class="paper prose home-personal">
+    <p>
+      I'm Derek — a U.S. Army veteran turned software developer. The military taught me
+      that reliability isn't luck; it's discipline, checklists, and systems that hold up
+      under pressure. I bring that same ops mindset to the infrastructure behind your
+      business.
+    </p>
+  </section>
+
+  <SectionMenu />
+</BaseLayout>

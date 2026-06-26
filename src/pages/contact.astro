@@ -1,0 +1,45 @@
+---
+import { Image } from 'astro:assets';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import logo from '../assets/logos/contactmelogo.png';
+
+// 👉 Replace YOUR_FORM_ID with the ID from your free Formspree form
+//    (https://formspree.io → New Form → copy the endpoint).
+const FORMSPREE_ENDPOINT = 'https://formspree.io/f/YOUR_FORM_ID';
+---
+
+<BaseLayout
+  title="Book a Free Audit — Derek Dombek"
+  description="Tell me about your business and what's painful. I'll take a free look at your hosting, backups, and uptime and tell you where the risks are."
+>
+  <section class="hero">
+    <h1><Image class="page-logo" src={logo} alt="Contact me" width={150} height={150} /></h1>
+    <p class="hero-sub">
+      Free 30-minute infrastructure audit — no jargon, no obligation. Tell me what's
+      painful and I'll tell you where the risks are.
+    </p>
+    <hr class="rule" />
+  </section>
+
+  <section class="paper">
+    <form class="contact-form" action={FORMSPREE_ENDPOINT} method="POST">
+      <label for="name">Your name</label>
+      <input id="name" type="text" name="name" placeholder="Name" required autocomplete="name" />
+
+      <label for="business">Business name</label>
+      <input id="business" type="text" name="business" placeholder="Your business" autocomplete="organization" />
+
+      <label for="email">Email address</label>
+      <input id="email" type="email" name="email" placeholder="you@example.com" required autocomplete="email" />
+
+      <label for="website">Website (if you have one)</label>
+      <input id="website" type="url" name="website" placeholder="https://..." autocomplete="url" />
+
+      <label for="message">What's painful right now?</label>
+      <textarea id="message" name="message" rows="6" placeholder="e.g. our site went down last week, we have no backups, updates are scary..." required></textarea>
+
+      <button type="submit" class="btn btn-accent">Request my free audit</button>
+      <p class="form-note">I'll get back to you within one business day.</p>
+    </form>
+  </section>
+</BaseLayout>

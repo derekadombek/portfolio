@@ -1,0 +1,46 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { services } from '../data/services';
+import { caseStudies } from '../data/caseStudies';
+---
+
+<BaseLayout
+  title="Services — Derek Dombek"
+  description="Fixed-scope DevOps and infrastructure services for small businesses: reliable hosting, backups, monitoring, cost cleanup, and tool hosting."
+>
+  <section class="hero">
+    <h1>Services</h1>
+    <p class="hero-sub">
+      Enterprise-grade infrastructure, sized for small business. Fixed scope,
+      plain language, real outcomes.
+    </p>
+    <hr class="rule" />
+  </section>
+
+  <section class="services-grid">
+    {services.map((service) => {
+      const demo = service.demo
+        ? caseStudies.find((c) => c.slug === service.demo)
+        : undefined;
+      return (
+        <article class="service-card" id={service.slug}>
+          <h2>{service.name}</h2>
+          <p class="service-tagline">{service.tagline}</p>
+          <ul class="service-outcomes">
+            {service.outcomes.map((o) => <li>{o}</li>)}
+          </ul>
+          {demo && (
+            <a class="service-demo" href={`/portfolio/${demo.slug}/`}>
+              See an example &rarr;
+            </a>
+          )}
+        </article>
+      );
+    })}
+  </section>
+
+  <section class="cs-cta">
+    <p>Not sure what you need?</p>
+    <a class="btn btn-accent" href="/contact/">Book a free audit</a>
+  </section>
+</BaseLayout>

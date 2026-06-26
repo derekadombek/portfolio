@@ -1,0 +1,21 @@
+---
+import { Image } from 'astro:assets';
+import work from '../assets/logos/portfoliologo.png';
+import story from '../assets/logos/aboutmelogo.png';
+import contact from '../assets/logos/contactmelogo.png';
+
+const items = [
+  { href: '/portfolio/', label: 'My Work', img: work, alt: 'Portfolio' },
+  { href: '/about/', label: 'My Story', img: story, alt: 'About me' },
+  { href: '/contact/', label: 'Contact Me', img: contact, alt: 'Contact me' },
+];
+---
+
+<nav class="section-menu" aria-label="Explore">
+  {items.map((i) => (
+    <a href={i.href}>
+      <Image src={i.img} alt={i.alt} width={110} height={110} />
+      <span>{i.label}</span>
+    </a>
+  ))}
+</nav>
