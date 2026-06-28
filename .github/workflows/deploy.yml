@@ -1,0 +1,33 @@
+name: Deploy
+
+# Build the Astro site and publish it to derekadombek.com via the reusable
+# action in derekadombek/website-deploy. Keyless: GitHub OIDC assumes the
+# deploy role provisioned for this repo (see that repo's infra/envs/portfolio).
+on:
+  push:
+    branches: [main]
+  workflow_dispatch: {}
+
+# Required for GitHub's OIDC token (keyless auth to AWS).
+permissions:
+  id-token: write
+  contents: read
+
+concurrency:
+  group: deploy
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: derekadombek/website-deploy/actions/aws-static-site@v1
+        with:
+          aws-region: ${{ vars.AWS_REGION }}
+          role-arn: ${{ vars.AWS_DEPLOY_ROLE_ARN }}
+          s3-bucket: ${{ vars.S3_BUCKET }}
+          cloudfront-distribution-id: ${{ vars.CLOUDFRONT_DISTRIBUTION_ID }}
+          install-command: npm ci
+          build-command: npm run build
+          source-dir: dist
