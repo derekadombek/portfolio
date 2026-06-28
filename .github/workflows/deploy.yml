@@ -28,6 +28,7 @@ jobs:
           role-arn: ${{ vars.AWS_DEPLOY_ROLE_ARN }}
           s3-bucket: ${{ vars.S3_BUCKET }}
           cloudfront-distribution-id: ${{ vars.CLOUDFRONT_DISTRIBUTION_ID }}
+          node-version: "22"
           install-command: npm ci
           build-command: npm run build
           source-dir: dist
