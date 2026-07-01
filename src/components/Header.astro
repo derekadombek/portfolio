@@ -89,8 +89,12 @@ const isCurrent = (href: string) =>
     // keep the bar up while the menu is open or near the top of the page
     if (menuOpen || y <= 120) {
       bar?.classList.remove('is-hidden');
-    } else if (Math.abs(delta) > 4) {
-      bar?.classList.toggle('is-hidden', delta > 0);
+    } else if (delta < 0) {
+      // any upward movement reveals the bar straight away
+      bar?.classList.remove('is-hidden');
+    } else if (delta > 6) {
+      // only a deliberate downward scroll tucks it away
+      bar?.classList.add('is-hidden');
     }
     lastY = y;
     ticking = false;
