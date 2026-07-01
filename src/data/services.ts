@@ -63,4 +63,34 @@ export const services: Service[] = [
     ],
     demo: 'booking-tool',
   },
+  {
+    slug: 'web-development',
+    name: 'Web Development',
+    tagline: 'A fast, modern website built to fit your business — not a template.',
+    outcomes: [
+      'Custom, responsive design that works on every device',
+      'Fast-loading pages built for search and conversions',
+      'Easy content updates you can manage yourself',
+    ],
+  },
+  {
+    slug: 'backend-development',
+    name: 'Backend Development',
+    tagline: 'The APIs, databases, and logic that power your app behind the scenes.',
+    outcomes: [
+      'Secure APIs and integrations that connect your tools',
+      'Well-structured databases built to scale',
+      'Reliable server-side logic with automated tests',
+    ],
+  },
+  {
+    slug: 'rpa',
+    name: 'Robotic Process Automation',
+    tagline: 'Hand off the repetitive, click-heavy work to software.',
+    outcomes: [
+      'Automate manual data entry and report generation',
+      'Bots that run on schedule or on demand, without errors',
+      'Free up hours of staff time every week',
+    ],
+  },
 ];
