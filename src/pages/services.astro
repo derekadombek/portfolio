@@ -28,6 +28,7 @@ import { caseStudies } from '../data/caseStudies';
           <ul class="service-outcomes">
             {service.outcomes.map((o) => <li>{o}</li>)}
           </ul>
+          {service.note && <p class="service-note">{service.note}</p>}
           {demo && (
             <a class="service-demo" href={`/portfolio/${demo.slug}/`}>
               See an example &rarr;

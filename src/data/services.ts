@@ -6,6 +6,8 @@ export interface Service {
   outcomes: string[];
   // which case-study slug demonstrates this service (optional until built)
   demo?: string;
+  // an optional aside spoken directly to the reader (e.g. proof / example)
+  note?: string;
 }
 
 export const services: Service[] = [
@@ -18,6 +20,7 @@ export const services: Service[] = [
       'Changes go live the moment you publish them',
       'No more "the site is down and I don\'t know why"',
     ],
+    note: 'This very site ships through that same pipeline — a predictable, fast, one-click deployment.',
     demo: 'site-deploy-pipeline',
   },
   {

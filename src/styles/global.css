@@ -418,10 +418,21 @@ main {
 }
 .service-demo:hover { text-decoration: underline; }
 
+.service-note {
+  margin-top: 1rem;
+  padding-left: 0.9rem;
+  border-left: 3px solid var(--accent-dark);
+  color: var(--ink-soft);
+  font-style: italic;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+}
+
 /* invert the card's contents when it flips dark on hover */
 .service-card:hover h2,
 .service-card:hover .service-tagline,
 .service-card:hover .service-demo,
+.service-card:hover .service-note,
 .service-card:hover .service-outcomes li::before { color: #fff; }
 .service-card:hover .service-outcomes li { color: #e5e5e5; }
 
