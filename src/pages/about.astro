@@ -2,7 +2,7 @@
 import { Image } from 'astro:assets';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import SectionMenu from '../components/SectionMenu.astro';
-import logo from '../assets/logos/aboutmelogo.png';
+import headshot from '../assets/photos/headshot.jpeg';
 ---
 
 <BaseLayout
@@ -10,32 +10,22 @@ import logo from '../assets/logos/aboutmelogo.png';
   description="From touring musician to U.S. Army veteran to software developer — the story of how Derek Dombek found his way into tech."
 >
   <section class="hero">
-    <h1><Image class="page-logo" src={logo} alt="About me" width={150} height={150} /></h1>
+    <h1><Image class="headshot" src={headshot} alt="Portrait of Derek Dombek" width={150} height={150} /></h1>
     <hr class="rule" />
   </section>
 
   <section class="paper prose">
     <p>
-      I was born in Stuart, Florida, but moved to Cleveland, Ohio when I was three
-      and was raised there until I graduated high school. The traditional college
-      path didn't feel right at the time, so instead I fell in love with playing
-      music in bands and touring all over the country.
+      Hi! I'm Derek. I was born in Florida, raised in Cleveland, and reside in lovely Boise, Idaho. I skipped the traditional college route early on because I was too busy living out of a van, playing music, and touring the country. 
     </p>
     <p>
-      After a few years, the road caught up with me. In 2013 I joined the United
-      States Army — a decision that taught me how to truly grow up. I served a tour in Afghanistan and had the privilege of getting to
-      know people from every kind of background.
+      Eventually, the road caught up with me, so in 2013 I decided to mix things up in a big way and joined the U.S. Army. It was a crash course in growing up. A deployment to Afghanistan introduced me to an incredible mix of people from all walks of life and taught me how to stay cool, calm, and collected when things get chaotic.
     </p>
     <p>
-      During that deployment I became determined to build something lasting when I
-      got home. I'd always had an interest in creation and design, and that's when
-      computer science clicked for me. Once I was back, I enrolled in the College of
-      Western Idaho's Software Development program. It felt like being a mechanic —
-      just with a computer instead of hand or power tools.
+      While deployed, I spent a lot of time reflecting on what I wanted to do after. I’ve always enjoying creating and learning how random things work holistically, and that’s when the computer science lightbulb finally went off. After getting back, I dove headfirst into software engineering. I quickly realized coding is exactly like being a mechanic—except the grease is just a massive coffee habit. 
     </p>
     <p>
-      The future is bright, and so is the tech industry. I couldn't be more excited
-      to be a part of it.
+      The tech world moves fast, but I'm excited to be here to build cool stuff and relationships, so please reach out!
     </p>
   </section>
 

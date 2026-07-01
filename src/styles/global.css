@@ -345,9 +345,14 @@ main {
 /* ---- Home: service highlights + personal note -------------------------- */
 .home-services {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: clamp(1rem, 3vw, 1.5rem);
   margin-top: clamp(2rem, 6vw, 3.5rem);
+}
+@media (max-width: 640px) {
+  .home-services {
+    grid-template-columns: 1fr;
+  }
 }
 .home-service {
   display: block;

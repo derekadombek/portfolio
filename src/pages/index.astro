@@ -24,21 +24,12 @@ import headshot from '../assets/photos/headshot.jpeg';
   </section>
 
   <section class="home-services">
-    {services.slice(0, 3).map((s) => (
+    {services.map((s) => (
       <a class="home-service" href={`/services/#${s.slug}`}>
         <h3>{s.name}</h3>
         <p>{s.tagline}</p>
       </a>
     ))}
-  </section>
-
-  <section class="paper prose home-personal">
-    <p>
-      I'm Derek — a U.S. Army veteran turned software developer. The military taught me
-      that reliability isn't luck; it's discipline, checklists, and systems that hold up
-      under pressure. I bring that same ops mindset to the infrastructure behind your
-      business.
-    </p>
   </section>
 
   <SectionMenu />
