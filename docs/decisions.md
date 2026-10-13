@@ -84,3 +84,12 @@ logged here on 2026-10-10/11. This repo keeps the website only: site copy in
 `src/data/*.ts`, case studies, pages. Supersedes the demo parts of "Plan split".
 **Why:** Pricing, care plans, client inventory, and sales strategy shouldn't be in a
 public repo, and they belong next to the contracts and client records.
+
+## 2026-10-13 — Case studies link to code and live demos
+**Decision:** `CaseStudy.links` (optional) shows public repo and live-demo links on the
+detail page ("See it"). Demo sites are fictional clients and say so. Replaces "live
+demos are available on request" for studies that have them. `deploy.yml` pins an exact
+website-deploy release (`@v1.0.0`); Renovate opens the bump PR.
+**Why:** The demo rules (portfolio-business `planning/demos/README.md`) call for
+repo/live links, and installs pin exact versions (portfolio-business decisions,
+2026-10-11).

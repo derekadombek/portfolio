@@ -1,0 +1,15 @@
+{
+  "extends": ["config:recommended"],
+  "packageRules": [
+    { "matchDepNames": ["derekadombek/website-deploy"], "groupName": "website-deploy" }
+  ],
+  "customManagers": [
+    {
+      "customType": "regex",
+      "managerFilePatterns": ["/^\\.github/workflows/.+\\.ya?ml$/"],
+      "matchStrings": ["package_ref:\\s*(?<currentValue>v\\d+\\.\\d+\\.\\d+)"],
+      "depNameTemplate": "derekadombek/website-deploy",
+      "datasourceTemplate": "github-tags"
+    }
+  ]
+}
