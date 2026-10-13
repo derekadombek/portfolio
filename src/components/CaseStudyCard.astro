@@ -9,7 +9,11 @@ const { study } = Astro.props;
 
 <a class="cs-card" href={`/portfolio/${study.slug}/`}>
   <div class="cs-media">
-    <img src={study.diagram} alt={`${study.title} architecture diagram`} width="480" height="300" loading="lazy" />
+    {study.diagram ? (
+      <img src={study.diagram} alt={`${study.title} architecture diagram`} width="480" height="300" loading="lazy" />
+    ) : (
+      <div class="cs-placeholder">Diagram coming soon</div>
+    )}
   </div>
   <div class="cs-body">
     <h3 class="cs-title">{study.title}</h3>

@@ -30,7 +30,7 @@ const service = services.find((s) => s.slug === study.service);
       )}
     </header>
 
-    <img class="cs-hero-img" src={study.diagram} alt={`${study.title} architecture diagram`} width="1440" height="648" />
+    {study.diagram && <img class="cs-hero-img" src={study.diagram} alt={`${study.title} architecture diagram`} width="1440" height="648" />}
 
     <section class="paper prose">
       <h2>The problem</h2>

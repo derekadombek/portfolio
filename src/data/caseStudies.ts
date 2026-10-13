@@ -6,7 +6,7 @@ export interface CaseStudy {
   solution: string;
   stack: string[];
   outcome: string;
-  diagram: string; // architecture diagram in /public/diagrams
+  diagram?: string; // architecture diagram in /public/diagrams (placeholder shown until one exists)
 }
 
 // Each entry is a problem I solve — the pain, how I approach it, and the
@@ -63,5 +63,17 @@ export const caseStudies: CaseStudy[] = [
     outcome:
       'Outages are caught in seconds and fixed before customers notice.',
     diagram: '/diagrams/monitoring.webp',
+  },
+  {
+    slug: 'paper-to-data',
+    title: 'Handwritten Docs to Data',
+    service: 'document-ocr',
+    problem:
+      'Intake forms, work orders, and logbooks are filled out by hand, then someone retypes them into a computer — slow, tedious, and full of typos. Old paper records sit in boxes where nobody can search them.',
+    solution:
+      'Documents are scanned or photographed and dropped into cloud storage, which kicks off an automated pipeline. OCR with handwriting recognition reads each page, the fields that matter (names, dates, amounts) are pulled into structured records, and anything below a confidence threshold goes to a short review queue for a person to confirm. Clean results are written to a spreadsheet or database.',
+    stack: ['AWS Textract (OCR + handwriting)', 'AWS S3 + Lambda', 'Python', 'Google Sheets / PostgreSQL'],
+    outcome:
+      'Paper becomes searchable data without retyping, and staff only touch the handful of entries the system isn\'t sure about.',
   },
 ];

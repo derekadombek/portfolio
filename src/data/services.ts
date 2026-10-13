@@ -87,6 +87,17 @@ export const services: Service[] = [
     ],
   },
   {
+    slug: 'document-ocr',
+    name: 'Handwritten Docs to Data',
+    tagline: 'Turn stacks of paper forms and handwritten notes into searchable, usable data.',
+    outcomes: [
+      'Scan or snap a photo — the text is read and pulled out automatically',
+      'Results land in a spreadsheet or database you already use',
+      'Anything unclear is flagged for a quick human check, not silently guessed',
+    ],
+    demo: 'paper-to-data',
+  },
+  {
     slug: 'rpa',
     name: 'Robotic Process Automation',
     tagline: 'Hand off the repetitive, click-heavy work to software.',
