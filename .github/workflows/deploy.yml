@@ -22,7 +22,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: derekadombek/website-deploy/actions/aws-static-site@v1
+      - uses: derekadombek/website-deploy/actions/aws-static-site@v1.0.0
         with:
           aws-region: ${{ vars.AWS_REGION }}
           role-arn: ${{ vars.AWS_DEPLOY_ROLE_ARN }}

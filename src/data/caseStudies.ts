@@ -7,10 +7,12 @@ export interface CaseStudy {
   stack: string[];
   outcome: string;
   diagram?: string; // architecture diagram in /public/diagrams (placeholder shown until one exists)
+  links?: { label: string; href: string }[]; // public code + live demo, shown on the detail page
 }
 
 // Each entry is a problem I solve — the pain, how I approach it, and the
-// outcome — not a past client engagement. Seeing it run live is on request.
+// outcome — not a past client engagement. Where it exists, `links` points at the
+// public code and a live demo (fictional demo clients, labeled as such).
 export const caseStudies: CaseStudy[] = [
   {
     slug: 'site-deploy-pipeline',
@@ -24,6 +26,11 @@ export const caseStudies: CaseStudy[] = [
     outcome:
       'Publishing a change goes from a nervous 20-minute manual upload to a single git push that is live in under a minute — reproducible, reversible, and secure by default.',
     diagram: '/diagrams/site-deploy.webp',
+    links: [
+      { label: 'Code: website-deploy on GitHub', href: 'https://github.com/derekadombek/website-deploy' },
+      { label: 'Live demo: Bob’s Fishing Tours (fictional demo client)', href: 'https://bob.derekadombek.com' },
+      { label: 'This site — deployed the same way', href: 'https://derekadombek.com' },
+    ],
   },
   {
     slug: 'booking-tool',

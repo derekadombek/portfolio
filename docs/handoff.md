@@ -9,24 +9,21 @@ Rules for agents:
 - "Next step" must be concrete enough that a fresh agent can start without asking.
 -->
 
-**Updated:** 2026-10-11 · **Branch:** main
+**Updated:** 2026-10-13 · **Branch:** hosting-links-and-pin (PR open, not merged)
 
 ## Just done
-- Moved all product/service planning to the private `~/repos/portfolio-business`
-  (`planning/` catalog, positioning, demos; demo status in its `PLAN.md`; six
-  decisions). This repo is now site-only; CLAUDE.md, PLAN.md, `/case-study` point there.
+- Hosting case study: `links` field + "See it" section (code, Bob's live demo, this site).
+- `deploy.yml` pinned to website-deploy `@v1.0.0`; `renovate.json` added.
 
 ## Current state
-- Build green. Nothing committed (agent setup, OCR work, Derek's about/Astro edits,
-  `docs/` handoff + decisions).
-- Site copy (`src/data/services.ts`) doesn't show products/modes yet (open PLAN item).
+- Build green. The PR can't merge until the website-deploy `v1.0.0` tag exists
+  (website-deploy #46, #47 merged, tag pushed). Merging to main deploys.
 
 ## Next step
-1. Demo work starts in `~/repos/portfolio-business` (its handoff: demo 00, Bob's site).
-2. Here: Formspree `YOUR_FORM_ID` in `src/pages/contact.astro`, OCR case-study diagram,
-   and the products/modes decision for `/services`.
+1. Derek: merge this PR after the tag; install Renovate on this repo.
+2. Then: Formspree `YOUR_FORM_ID` in `src/pages/contact.astro`, OCR case-study diagram,
+   products/modes decision for `/services`.
 
 ## Watch out for
-- Never copy pricing, care plans, client names, or leads from portfolio-business into
-  this public repo.
-- Don't push: pushing `main` deploys.
+- Never copy pricing, care plans, client names, or leads from portfolio-business here.
+- Don't push main: pushing main deploys.
