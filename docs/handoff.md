@@ -9,9 +9,14 @@ Rules for agents:
 - "Next step" must be concrete enough that a fresh agent can start without asking.
 -->
 
-**Updated:** 2026-11-09 · **Branch:** main
+**Updated:** 2026-11-09 · **Branch:** impeccable-plugin
 
 ## Just done
+- 2026-11-09, branch `impeccable-plugin`, uncommitted: the copied Impeccable setup is reverted (skill,
+  binary, four agents, detector hooks in `.claude/settings.json`, Copilot hook) and the official
+  plugin `impeccable@impeccable` is enabled in `.claude/settings.json` instead. Kept: the UI gate,
+  `.impeccable/config.json`, its `.gitignore` lines. Before committing, check in a fresh session
+  opened in this folder (steps in `portfolio-business/planning/agent-tooling.md`, Step 3).
 - Impeccable is now required for UI work (decision 2026-11-09 in `portfolio-business`).
   Skill and agents in `.claude/`, detector hook in `.claude/settings.json`, UI gate on
   `src/**/*.astro|css` and `src/assets/` (`UI_SKILL` in `agent-kit.conf`), rule in CLAUDE.md.
