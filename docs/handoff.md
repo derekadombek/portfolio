@@ -9,21 +9,25 @@ Rules for agents:
 - "Next step" must be concrete enough that a fresh agent can start without asking.
 -->
 
-**Updated:** 2026-10-13 · **Branch:** hosting-links-and-pin (PR open, not merged)
+**Updated:** 2026-11-09 · **Branch:** main
 
 ## Just done
-- Hosting case study: `links` field + "See it" section (code, Bob's live demo, this site).
-- `deploy.yml` pinned to website-deploy `@v1.0.0`; `renovate.json` added.
+- Impeccable is now required for UI work (decision 2026-11-09 in `portfolio-business`).
+  Skill and agents in `.claude/`, detector hook in `.claude/settings.json`, UI gate on
+  `src/**/*.astro|css` and `src/assets/` (`UI_SKILL` in `agent-kit.conf`), rule in CLAUDE.md.
+- Earlier: hosting case study links + `deploy.yml` pinned to website-deploy `@v1.0.0` (PR #1, merged).
 
 ## Current state
-- Build green. The PR can't merge until the website-deploy `v1.0.0` tag exists
-  (website-deploy #46, #47 merged, tag pushed). Merging to main deploys.
+- Build green. No PRODUCT.md or DESIGN.md yet, so Impeccable has no brand context here.
+- Site copy (`src/data/services.ts`) doesn't show products/modes yet (open PLAN item).
 
 ## Next step
-1. Derek: merge this PR after the tag; install Renovate on this repo.
-2. Then: Formspree `YOUR_FORM_ID` in `src/pages/contact.astro`, OCR case-study diagram,
-   products/modes decision for `/services`.
+1. `/impeccable init` (Derek answers its questions), then `/impeccable document` from the
+   current site, so later UI work starts from the real brand.
+2. Formspree `YOUR_FORM_ID` in `src/pages/contact.astro`, OCR case-study diagram, and the
+   products/modes decision for `/services`. Renovate on this repo, if not installed yet.
 
 ## Watch out for
-- Never copy pricing, care plans, client names, or leads from portfolio-business here.
-- Don't push main: pushing main deploys.
+- Never copy pricing, care plans, client names, or leads from portfolio-business into
+  this public repo. `.impeccable/config.json` is public too: keep reasons generic.
+- Don't push: pushing `main` deploys.

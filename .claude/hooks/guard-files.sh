@@ -31,4 +31,19 @@ if [ ! -e "$file" ]; then
     [[ "$rel" == ${rule%%|*} ]] && block "New file $rel: ${rule#*|}"
   done
 fi
+
+# UI gate: UI files need the UI skill loaded in this session first.
+if [ -n "$UI_SKILL" ]; then
+  session=$(json .session_id)
+  for p in "${UI_PATHS[@]}"; do
+    # shellcheck disable=SC2053
+    [[ "$rel" == $p ]] || continue
+    for x in "${UI_EXCEPT[@]}"; do
+      # shellcheck disable=SC2053
+      [[ "$rel" == $x ]] && exit 0
+    done
+    [ -n "$session" ] && [ -f "$STATE/ui-skill-$session" ] && exit 0
+    block "$rel is a UI file. Load the $UI_SKILL skill (Skill tool, skill: \"$UI_SKILL\") and follow its setup before editing UI, even for a small change. This repo requires it (UI_SKILL in .claude/agent-kit.conf)."
+  done
+fi
 exit 0

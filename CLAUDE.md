@@ -72,6 +72,12 @@ There is no lint or test script. Don't invent them.
 - Copy: outcomes over tooling, plain language for non-technical owners (see
   `~/repos/portfolio-business/planning/positioning.md`).
 - Accessibility: real `alt` text, labeled form fields, don't rely on color alone.
+- **UI work goes through Impeccable.** Load the `impeccable` skill and follow its setup before
+  touching a page, component, layout, style or image (`src/**/*.astro`, `*.css`, `src/assets/`),
+  even for a small change. A hook blocks those edits until you do (`UI_SKILL` in
+  `.claude/agent-kit.conf`). Copy in `src/data/` goes through `/service` and `/case-study` instead.
+  Impeccable's detector scans each edit and the whole session at the end; fix what it finds, or
+  record a deliberate exception with `impeccable hooks ignore-value` and a reason.
 
 ## Skills
 

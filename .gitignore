@@ -27,3 +27,5 @@ yarn-error.log*
 # claude code — personal settings
 .claude/settings.local.json
 .claude/state/
+.impeccable/config.local.json
+.impeccable/hook.cache.json
